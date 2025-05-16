@@ -13,21 +13,22 @@
       height: 100%;
     }
   </style>
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=283a3d910908b8c9dffa5609bd039d5a"></script>
+  <!-- autoload=false 설정 -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=283a3d910908b8c9dffa5609bd039d5a&autoload=false"></script>
 </head>
 <body>
   <div id="map"></div>
 
   <script>
-    window.onload = function () {
+    // 카카오 맵 SDK가 완전히 로드된 뒤에 실행
+    kakao.maps.load(function() {
       const container = document.getElementById('map');
       const options = {
-        center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청
+        center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청 좌표
         level: 3
       };
-
       const map = new kakao.maps.Map(container, options);
-    };
+    });
   </script>
 </body>
 </html>
