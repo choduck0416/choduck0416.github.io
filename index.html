@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>카카오 지도</title>
+  <title>map.com</title>
   <style>
     html, body {
       height: 100%;
@@ -14,13 +14,12 @@
     }
   </style>
   <!-- autoload=false 설정 -->
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=283a3d910908b8c9dffa5609bd039d5a&autoload=false"></script>
+  <script src="kakaomap.api=false"></script>
 </head>
 <body>
   <div id="map"></div>
 
   <script>
-    // 카카오 맵 SDK가 완전히 로드된 뒤에 실행
     kakao.maps.load(function() {
       const container = document.getElementById('map');
       const options = {
